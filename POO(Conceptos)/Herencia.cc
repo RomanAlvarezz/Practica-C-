@@ -45,9 +45,10 @@ void Alumno::mostrarAlumno(){
 
 int main(){
     Alumno a1("Pedri", 20, 2905, 'A');
-    a1.mostrarAlumno();
-    cout << "---------" <<endl;
-    a1.mostrarDatos();
+    // a1.mostrarAlumno();
+    // cout << "---------" <<endl;
+    // a1.mostrarDatos();
+    cout << a1.nombre<<endl;
 
     return 0;
 }
