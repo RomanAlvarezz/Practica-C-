@@ -33,8 +33,15 @@ class Oferta {
         float getMonto() const;
 };
 
-Oferta::Oferta(float _monto, const Persona _persona) : monto(_monto), ofertante(_persona) {
+//aca no me tira error
+// Oferta::Oferta(float _monto, const Persona _persona) : monto(_monto), ofertante(_persona) {
 
+// }
+
+//aca me tira error
+Oferta::Oferta(float _monto, const Persona _persona) {
+    monto = _monto;
+    ofertante = _persona;
 }
 
 
