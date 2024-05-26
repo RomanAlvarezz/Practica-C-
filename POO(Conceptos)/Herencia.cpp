@@ -39,16 +39,17 @@ void Persona::mostrarDatos(){
 
 void Alumno::mostrarAlumno(){
     mostrarDatos();
+    //cout<<"Nombre: "<<nombre<<endl; // Aca no puedo acceder a el atributo nombre porque es un atributo privado de la clase Persona
     cout<<"Legajo: "<<legajo<<endl;
     cout<<"Comision: "<<comision<<endl;
 }
 
 int main(){
     Alumno a1("Pedri", 20, 2905, 'A');
-    // a1.mostrarAlumno();
-    // cout << "---------" <<endl;
-    // a1.mostrarDatos();
-    cout << a1.nombre<<endl;
+    a1.mostrarAlumno();
+    cout << "---------" <<endl;
+    //a1.mostrarDatos();
+    //cout << a1.nombre<<endl; // no puedo hacer esto porque el atributo nombre es privado
 
     return 0;
 }

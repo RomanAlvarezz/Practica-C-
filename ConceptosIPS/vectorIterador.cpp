@@ -44,5 +44,9 @@ int main()
         cout << "vInt_3 = " << *I1 << endl;
     }
 
+    cout << "---------------------" << endl;
+
+    cout << "elemento : " << *(vInt_3.end());
+
     return 0;
 }

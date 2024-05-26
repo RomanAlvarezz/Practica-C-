@@ -19,8 +19,7 @@ int main() {
  vInt_2 = vInt_1;
 
  cout<< "vInt_2 despues: " << vInt_2.size() <<endl;
- for(int i=0; i < vInt_2.size() ;i++)
- {
- cout << "vInt_2 = " << vInt_2[i] << endl;
+ for(int i=0; i < vInt_2.size() ;i++){
+    cout << "vInt_2 = " << vInt_2[i] << endl;
  }
 }

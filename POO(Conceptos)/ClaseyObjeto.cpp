@@ -2,7 +2,7 @@
 #include <stdlib.h>
 using namespace std; 
 
-class Persona{
+class Persona {
     private: //Atributos
         int edad;
         string nombre;

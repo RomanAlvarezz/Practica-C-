@@ -12,6 +12,7 @@ class Fecha {
         Fecha(long);
         void mostrarFecha();
         void anadirEvento(string);
+        void mostrarEvento();
 };
 
 Fecha::Fecha(int _dia, int _mes, int _anio){
@@ -35,11 +36,18 @@ void Fecha::anadirEvento(string nombreEvento){
     //cout << evento;
 }
 
+void Fecha::mostrarEvento(){
+    cout << evento << endl;
+}
+
 int main(){
     Fecha cumpleJuan(27,12,2001);
     Fecha cumplePedro = Fecha (6,8,2007);
     Fecha casamientoJuan(20240601);
     casamientoJuan.anadirEvento("casamiento");
+    casamientoJuan.mostrarEvento();
+    casamientoJuan.anadirEvento("cumpleanios"); // pisa casamiento sin problemas
+    casamientoJuan.mostrarEvento();
 
     casamientoJuan.mostrarFecha();
     cumplePedro.mostrarFecha();

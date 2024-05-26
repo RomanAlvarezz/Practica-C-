@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void separador () {
+    cout << "-----------------" <<endl;
+}
+
 int main() {
     vector<int> vInt_2(10,1);
     //push_back() es el que permite ingresar un nuevo elemento
@@ -14,9 +18,11 @@ int main() {
         cout << "vInt_2 = " << vInt_2[i] << endl;
     }
 
+    separador();
+
     cout << "ñTamao de vInt_2 = " << vInt_2.size() << endl;
 
-    vInt_2.push_back(5);
+    vInt_2.push_back(5); // [1,1,1,1,1,1,1,1,1,1,5] lo agrega al final
 
     cout << "Nuevo ñtamao de vInt_2 = " << vInt_2.size() << endl;
 
@@ -24,6 +30,8 @@ int main() {
     {
         cout << "vInt_2 = " << vInt_2[i] << endl;
     }
+
+    separador();
 
     //pop_back() eliminamos el último elemento
     //Esta ófuncin no lo retorna
@@ -34,6 +42,8 @@ int main() {
     {
         cout << "vInt_2 = " << vInt_2[i] << endl;
     }
+
+    separador();
 
     cout << "ñTamao de vInt_2 = " << vInt_2.size() << endl;
     vInt_2.resize(5);
@@ -47,6 +57,8 @@ int main() {
         cout << "vInt_2 = " << vInt_2[i] << endl;
     }
 
+    separador();
+
     // Borrado de elementos
     //
     vector<int> vInt_3(10);
@@ -55,24 +67,27 @@ int main() {
         vInt_3[i] = i+1;
 
     cout << "El ñtamao de vInt_3 es " << vInt_3.size() << endl;
-    cout << "--------------" << endl;
+    separador();
     for(int i=0; i < vInt_3.size() ;i++)
     {
         cout << "vInt_3 = " << vInt_3[i] << endl;
     }
 
+    separador();
+    //            ete lo incluye    ete no
     vInt_3.erase(vInt_3.begin()+3, vInt_3.begin()+6);
-    cout << "--------------" << endl;
     for(int i=0; i < vInt_3.size() ;i++)
     {
         cout << "vInt_3 = " << vInt_3[i] << endl;
     }
+    separador();
     cout << "El ñtamao despues del borrado de vInt_3 es " << vInt_3.size() << endl;
 
     for(int i=0; i < vInt_3.size() ;i++)
     {
         cout << "vInt_3 = " << vInt_3[i] << endl;
     }
+    separador();
 
     // IMPORTANTE erase() no recibe elementos sino posiciones!!!!
     //
@@ -82,8 +97,9 @@ int main() {
     cout << endl;
     for(int i=0; i < vInt_3.size() ;i++)
     {
-        cout << "vInt_3 = " << vInt_3[i] << endl;
+        cout << "vInt_3&&&& = " << vInt_3[i] << endl;
     }
+    separador();
 
     // otra forma (de varias)
     //
