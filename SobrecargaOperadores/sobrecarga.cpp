@@ -14,6 +14,7 @@ class Coordenada {
         Coordenada operator++();
         bool operator==(Coordenada c2);
         friend Coordenada operator-(Coordenada c1, Coordenada c2);
+        //friend ostream& operator<<(ostream &os, Coordenada c)
 };
 
 Coordenada Coordenada::operator+(Coordenada c2) {
@@ -36,15 +37,21 @@ Coordenada operator-(Coordenada c1, Coordenada c2){
     int y2 = c1.y - c2.y;
     return Coordenada(x1,y2);
 }
+
+ostream& operator<<(ostream &os, Coordenada c){
+    os << "(" << c.x << "," << c.y << ")";
+    return os;
+}
+
 int main () {
-    Coordenada c1(1, 2);
+    Coordenada c1 = Coordenada(1, 2);
     Coordenada c2(3, 4);
     Coordenada c3 = c1 + c2 + c1;
 
     // Imprimir los valores para verificar
-    std::cout << "c3: (" << c3.x << ", " << c3.y << ")" << std::endl;
+    cout << "c3: (" << c3.x << ", " << c3.y << ")" << endl;
     Coordenada c4 = ++c1;
-    cout << "c4: " << c4.x << "," << c4.y << endl;
+    cout << "c4: " << c4.x << ", " << c4.y << endl;
     if (c1 == c2) {
         cout << "c1 y c2 son iguales" << endl;
     } else {
@@ -53,6 +60,7 @@ int main () {
 
     Coordenada c5 = c1 - c2;
     cout << "c1 - c2 = " << c5.x << "," << c5.y << endl;
+    cout << c1 << endl;
 
     return 0;
 }
